@@ -449,4 +449,8 @@ footer {
      .footer-info address span {
           display: block;
      }
+     header::after {
+          top: 70px;
+          transform: rotate(1deg);
+     }
 }
