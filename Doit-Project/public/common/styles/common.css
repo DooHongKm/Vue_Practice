@@ -240,7 +240,7 @@ button:focus {
      vertical-align: middle;
 }
 
-.system > button:first-child::before {
+.system > button:first-of-type::before {
      display: none;
 }
 
@@ -331,11 +331,11 @@ footer {
      top: 0;
 }
 
-.btn-text:first-child {
+.btn-text:first-of-type {
      padding-left: 0;
 }
 
-.btn-text:first-child::before {
+.btn-text:first-of-type::before {
      display: none;
 }
 
@@ -378,4 +378,75 @@ footer {
      flex: 1;
      padding-left: 20px;
      font-size: 12px;
+}
+
+/* 태블릿 + 모바일 - 헤더 로그인/회원가입 버튼 */
+@media screen and (max-width: 1024px) {
+     .system > button {
+          width: 25px;
+          height: 25px;
+          font-size: 0;
+     }
+     .system > button::before {
+          display: none;
+     }
+     .system > button:first-of-type {
+          background: url("/images/icon-login.svg") no-repeat 0 0/100%;
+          margin-right: 15px;
+     }
+     .system > button:nth-of-type(2) {
+          background: url("/images/icon-member.svg") no-repeat 0 0/100%;
+     }
+}
+
+/* 모바일 - 헤더 메뉴 버튼 + 푸터 서비스 버튼 */
+@media screen and (max-width: 767px) {
+     nav ul > li {
+          flex: auto;
+          padding-right: 10px;
+     }
+     nav ul > li:last-of-type {
+          padding-right: 0;
+     }
+     nav ul > li > button {
+          font-size: 15px;
+     }
+     .botinfo {
+          height: auto;
+          padding: 0 30px;
+     }
+     .botbtngroup {
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 10px 0;
+     }
+     .footerinfo {
+          position: relative;
+     }
+     .footerinfo::before {
+          top: 0;
+     }
+     .btn-text {
+          width: 33%;
+          margin-bottom: 10px;
+          font-size: 11px;
+     }
+     .btn-gray {
+          min-width: 75px;
+          height: 24px;
+          font-size: 11px;
+     }
+     .btn-text + .btn-gray {
+          margin-left: 0;
+     }
+     .footer-logo img {
+          width: 85px;
+     }
+     .footer-logo {
+          align-self: flex-start;
+          padding-top: 4px;
+     }
+     .footer-info address span {
+          display: block;
+     }
 }
