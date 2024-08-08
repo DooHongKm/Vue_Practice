@@ -280,7 +280,102 @@ header::after {
      position: absolute;
      left: 0;
      top: 80px;
-     transform: rotate(1.5deg);
+     transform: rotate(1deg);
      box-shadow: 1px 5px 9px -3px rgba(50, 50, 50, 0.75);
      z-index: 2;
+}
+
+#wrap {
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+}
+
+footer {
+     margin-top: auto;
+     position: relative;
+}
+
+.botinfo {
+     width: 100%;
+     height: 50px;
+     padding: 10px 0;
+     background: #ebebeb;
+     border-top: 1px solid #ddd;
+     border-bottom: 1px solid #ddd;
+}
+
+.botbtngroup {
+     max-width: 1200px;
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 20px;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+}
+
+.btn-text {
+     padding: 0 10px;
+     position: relative;
+}
+
+.btn-text::before {
+     content: "";
+     display: block;
+     width: 1px;
+     height: 18px;
+     background: #d1d1d1;
+     position: absolute;
+     left: 0;
+     top: 0;
+}
+
+.btn-text:first-child {
+     padding-left: 0;
+}
+
+.btn-text:first-child::before {
+     display: none;
+}
+
+.btn-gray {
+     height: 29px;
+     padding: 0 10px;
+     margin-left: 10px;
+     background: #606060;
+     color: #fff;
+}
+
+.footerinfo {
+     max-width: 1200px;
+     width: 100%;
+     margin: 0 auto;
+     padding: 20px;
+     display: flex;
+     align-items: center;
+}
+
+.footerinfo::before {
+     height: 35px;
+     background: url("/images/footer-bg.png") repeat-x;
+     position: absolute;
+     left: 0;
+     top: 50px;
+     z-index: 2;
+}
+
+.footer-logo, .footer-sub {
+     position: relative;
+     z-index: 3;
+}
+
+.footer-logo img {
+     width: 125px;
+}
+
+.footer-sub {
+     flex: 1;
+     padding-left: 20px;
+     font-size: 12px;
 }
